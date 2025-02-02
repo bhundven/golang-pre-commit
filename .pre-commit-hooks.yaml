@@ -1,0 +1,85 @@
+---
+- id: go-fmt
+  name: 'gofmt'
+  entry: pre-commit-hooks/gofmt.sh
+  types: [go]
+  exclude: '(^|/)vendor/'
+  language: 'script'
+  description: "Runs `gofmt`. Requires golang"
+  pass_filenames: true
+- id: go-imports
+  name: 'goimports'
+  entry: pre-commit-hooks/go-imports.sh
+  types: [go]
+  exclude: '(^|/)vendor/'
+  language: 'script'
+  description: "Runs `goimports`. Requires golang and goimports"
+  pass_filenames: true
+- id: go-vet
+  name: 'go vet'
+  entry: pre-commit-hooks/go-vet.sh
+  types: [go]
+  exclude: '(^|/)vendor/'
+  language: 'script'
+  description: "Runs `go vet`. Requires golang"
+  pass_filenames: true
+- id: go-lint
+  name: 'golint'
+  entry: pre-commit-hooks/go-lint.sh
+  types: [go]
+  exclude: '(^|/)vendor/'
+  language: 'script'
+  description: "Runs `golint`. Requires golang and golint"
+  pass_filenames: true
+- id: golangci-lint
+  name: 'golangci-lint'
+  entry: pre-commit-hooks/golangci-lint.sh
+  types: [go]
+  exclude: '(^|/)vendor/'
+  language: 'script'
+  description: "Runs `golangci-lint`. Requires golangci-lint"
+  pass_filenames: true
+- id: go-critic
+  name: "gocritic"
+  entry: pre-commit-hooks/go-critic.sh
+  types: [go]
+  exclude: '(^|/)vendor/'
+  language: 'script'
+  description: "Runs `gocritic`. Requires gocritic"
+  pass_filenames: true
+- id: go-unit-tests
+  name: 'go test'
+  entry: pre-commit-hooks/go-unit-tests.sh
+  types: [go]
+  exclude: '(^|/)vendor/'
+  language: 'script'
+  description: "Runs `go test`"
+  pass_filenames: false
+- id: go-build
+  name: 'go build'
+  entry: pre-commit-hooks/go-build.sh
+  types: [go]
+  language: 'script'
+  description: "Runs `go build`"
+  pass_filenames: false
+- id: go-generate
+  name: 'go generate'
+  entry: pre-commit-hooks/go-build.sh
+  types: [go]
+  language: 'script'
+  description: "Runs `go generate`"
+  pass_filenames: true
+- id: go-mod-tidy
+  name: 'go mod tidy'
+  entry: pre-commit-hooks/go-mod-tidy.sh
+  types: [go]
+  language: 'script'
+  description: "Runs `go mod tidy -v`"
+  pass_filenames: true
+- id: go-mod-vendor
+  name: 'go mod vendor'
+  entry: pre-commit-hooks/go-mod-vendor.sh
+  types: [go]
+  language: 'script'
+  description: "Runs `go mod vendor`"
+  pass_filenames: false
