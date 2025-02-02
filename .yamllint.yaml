@@ -1,0 +1,12 @@
+---
+extends: default
+
+yaml-files:
+  - '*.yaml'
+  - '*.yml'
+
+# Github workflows are checked by actionlint
+ignore: |
+  .github/workflows/
+
+# rules:
