@@ -7,6 +7,7 @@ This is a collection of golang [pre-commit](http://pre-commit.com/) hooks.
   - repo: https://github.com/bhundven/golang-pre-commit.git
     rev: v1.0.0
     hooks:
+      - id: go-fmt
 ```
 
 ## Available Hooks
