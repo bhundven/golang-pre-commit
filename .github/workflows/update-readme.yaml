@@ -1,6 +1,12 @@
 name: "Update Readme"
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/README.md.header'
+      - '.github/workflows/update-readme.yaml'
+      - '.pre-commit-hooks.yaml'
   release:
     types: [published]
   workflow_dispatch:
