@@ -5,7 +5,7 @@
   types: [go]
   exclude: '(^|/)vendor/'
   language: 'script'
-  description: "Runs `gofmt`. Requires golang"
+  description: "Runs `gofmt`. Requires golang: https://go.dev/doc/install"
   pass_filenames: true
 - id: go-imports
   name: 'goimports'
@@ -13,7 +13,7 @@
   types: [go]
   exclude: '(^|/)vendor/'
   language: 'script'
-  description: "Runs `goimports`. Requires golang and goimports"
+  description: "Runs `goimports`. Requires goimports: https://pkg.go.dev/golang.org/x/tools/cmd/goimports"  # yamllint disable-line rule:line-length
   pass_filenames: true
 - id: go-vet
   name: 'go vet'
@@ -21,7 +21,7 @@
   types: [go]
   exclude: '(^|/)vendor/'
   language: 'script'
-  description: "Runs `go vet`. Requires golang"
+  description: "Runs `go vet`. Requires golang: https://go.dev/doc/install"
   pass_filenames: true
 - id: go-lint
   name: 'golint'
@@ -29,7 +29,7 @@
   types: [go]
   exclude: '(^|/)vendor/'
   language: 'script'
-  description: "Runs `golint`. Requires golang and golint"
+  description: "[DEPRECATED] Runs `golint`. Requires golint: https://github.com/golang/lint"  # yamllint disable-line rule:line-length
   pass_filenames: true
 - id: golangci-lint
   name: 'golangci-lint'
@@ -37,7 +37,7 @@
   types: [go]
   exclude: '(^|/)vendor/'
   language: 'script'
-  description: "Runs `golangci-lint`. Requires golangci-lint"
+  description: "Runs `golangci-lint`. Requires golangci-lint: https://github.com/golangci/golangci-lint"  # yamllint disable-line rule:line-length
   pass_filenames: true
 - id: go-critic
   name: "gocritic"
@@ -45,7 +45,7 @@
   types: [go]
   exclude: '(^|/)vendor/'
   language: 'script'
-  description: "Runs `gocritic`. Requires gocritic"
+  description: "Runs `gocritic`. Requires gocritic: https://github.com/go-critic/go-critic"  # yamllint disable-line rule:line-length
   pass_filenames: true
 - id: go-unit-tests
   name: 'go test'
@@ -53,33 +53,33 @@
   types: [go]
   exclude: '(^|/)vendor/'
   language: 'script'
-  description: "Runs `go test`"
+  description: "Runs `go test`. Requires golang: https://go.dev/doc/install"
   pass_filenames: false
 - id: go-build
   name: 'go build'
   entry: pre-commit-hooks/go-build.sh
   types: [go]
   language: 'script'
-  description: "Runs `go build`"
+  description: "Runs `go build`. Requires golang: https://go.dev/doc/install"
   pass_filenames: false
 - id: go-generate
   name: 'go generate'
   entry: pre-commit-hooks/go-build.sh
   types: [go]
   language: 'script'
-  description: "Runs `go generate`"
+  description: "Runs `go generate`. Requires golang: https://go.dev/doc/install"
   pass_filenames: true
 - id: go-mod-tidy
   name: 'go mod tidy'
   entry: pre-commit-hooks/go-mod-tidy.sh
   types: [go]
   language: 'script'
-  description: "Runs `go mod tidy -v`"
+  description: "Runs `go mod tidy -v`. Requires golang: https://go.dev/doc/install"  # yamllint disable-line rule:line-length
   pass_filenames: true
 - id: go-mod-vendor
   name: 'go mod vendor'
   entry: pre-commit-hooks/go-mod-vendor.sh
   types: [go]
   language: 'script'
-  description: "Runs `go mod vendor`"
+  description: "Runs `go mod vendor`. Requires golang: https://go.dev/doc/install"  # yamllint disable-line rule:line-length
   pass_filenames: false
