@@ -1,0 +1,72 @@
+name: "Update Readme"
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+          ref: main
+
+      - name: Generate README.md
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Fail early if yq isn't installed
+          if ! command -v yq > /dev/null 2>&1
+          then
+            echo "yq is not installed!"
+            exit 1
+          fi
+
+          declare RM_HEADER
+          declare RM_DEST
+          declare HOOK_CONTENT
+          declare LATEST_VER
+
+          LATEST_VER="$(git describe --tags --abbrev=0)"
+
+          HOOK_CONTENT=""
+
+          RM_HEADER=".github/README.md.header"
+          RM_DEST="README.md"
+
+          for hook in $(yq -r '.[].id' < .pre-commit-hooks.yaml)
+          do
+            HOOK_CONTENT+="* \`$hook\`"
+            HOOK_CONTENT+=" - $(hook="$hook" yq -r '.[] | select(.id == env(hook)) | .description' < .pre-commit-hooks.yaml)\n"
+          done
+
+          # Open FD 3 for RM_DEST
+          exec 3<> "$RM_DEST"
+
+          cat "$RM_HEADER" >&3
+          echo -ne "## Usage\n\n" >&3
+          echo -ne '```yaml\n' >&3
+          echo -ne '  - repo: https://github.com/bhundven/golang-pre-commit.git\n' >&3
+          echo -ne "    rev: ${LATEST_VER}\n" >&3
+          echo -ne '    hooks:\n' >&3
+          echo -ne '```\n\n' >&3
+
+          echo -ne "## Available Hooks\n\n" >&3
+          echo -ne "$HOOK_CONTENT" >&3
+
+          # Close FD 3
+          exec 3>&-
+
+      - name: Push Changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          committer_name: GitHub Actions
+          committer_email: actions@github.com
+          add: README.md
+          message: 'chore: Update README.md for release'
