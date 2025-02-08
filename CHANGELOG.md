@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/bhundven/golang-pre-commit/compare/v1.0.1...v1.1.0) (2025-02-08)
+
+
+### Features
+
+* Add gofumpt ([#20](https://github.com/bhundven/golang-pre-commit/issues/20)) ([adbc2af](https://github.com/bhundven/golang-pre-commit/commit/adbc2af9f7396749627c7c1269c2985a35f6765e))
+
 ## [1.0.1](https://github.com/bhundven/golang-pre-commit/compare/v1.0.0...v1.0.1) (2025-02-03)
 
 
