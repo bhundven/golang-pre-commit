@@ -9,4 +9,5 @@ yaml-files:
 ignore: |
   .github/workflows/
 
-# rules:
+rules:
+  line-length: disable
