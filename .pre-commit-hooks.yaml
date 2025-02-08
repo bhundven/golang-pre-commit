@@ -7,6 +7,14 @@
   language: 'script'
   description: "Runs `gofmt`. Requires golang: https://go.dev/doc/install"
   pass_filenames: true
+- id: go-fumpt
+  name: 'gofumpt'
+  entry: pre-commit-hooks/go-fumpt.sh
+  types: [go]
+  exclude: '(^|/)vendor/'
+  language: 'script'
+  description: "Runs `gofumpt`. Requires gofumpt: https://github.com/mvdan/gofumpt"  # yamllint disable-line rule:line-length
+  pass_filenames: true
 - id: go-imports
   name: 'goimports'
   entry: pre-commit-hooks/go-imports.sh
