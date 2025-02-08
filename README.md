@@ -13,6 +13,7 @@ This is a collection of golang [pre-commit](http://pre-commit.com/) hooks.
 ## Available Hooks
 
 * `go-fmt` - Runs `gofmt`. Requires golang: https://go.dev/doc/install
+* `go-fumpt` - Runs `gofumpt`. Requires gofumpt: https://github.com/mvdan/gofumpt
 * `go-imports` - Runs `goimports`. Requires goimports: https://pkg.go.dev/golang.org/x/tools/cmd/goimports
 * `go-vet` - Runs `go vet`. Requires golang: https://go.dev/doc/install
 * `go-lint` - [DEPRECATED] Runs `golint`. Requires golint: https://github.com/golang/lint
