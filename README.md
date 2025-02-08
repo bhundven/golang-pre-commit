@@ -5,7 +5,7 @@ This is a collection of golang [pre-commit](http://pre-commit.com/) hooks.
 
 ```yaml
   - repo: https://github.com/bhundven/golang-pre-commit.git
-    rev: v1.0.1
+    rev: v1
     hooks:
       - id: go-fmt
 ```
@@ -24,3 +24,4 @@ This is a collection of golang [pre-commit](http://pre-commit.com/) hooks.
 * `go-generate` - Runs `go generate`. Requires golang: https://go.dev/doc/install
 * `go-mod-tidy` - Runs `go mod tidy -v`. Requires golang: https://go.dev/doc/install
 * `go-mod-vendor` - Runs `go mod vendor`. Requires golang: https://go.dev/doc/install
+all
