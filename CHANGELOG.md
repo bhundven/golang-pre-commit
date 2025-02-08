@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/bhundven/golang-pre-commit/compare/v1.1.0...v1.1.1) (2025-02-08)
+
+
+### Bug Fixes
+
+* Disable yamllint line-length ([#22](https://github.com/bhundven/golang-pre-commit/issues/22)) ([50d6378](https://github.com/bhundven/golang-pre-commit/commit/50d6378622a71df9ddd4de8033866795cf1bd10a))
+
 ## [1.1.0](https://github.com/bhundven/golang-pre-commit/compare/v1.0.1...v1.1.0) (2025-02-08)
 
 
