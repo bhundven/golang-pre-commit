@@ -91,3 +91,10 @@
   language: 'script'
   description: "Runs `go mod vendor`. Requires golang: https://go.dev/doc/install"
   pass_filenames: false
+- id: generate-mockery
+  name: 'generate mockery'
+  entry: pre-commit-hooks/generate-mockery.sh
+  types: [go]
+  language: 'script'
+  description: "Runs `mockery`. Requires mockery: https://github.com/vektra/mockery"
+  pass_filenames: false
