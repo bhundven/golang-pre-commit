@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/bhundven/golang-pre-commit/compare/v1.1.1...v1.1.2) (2025-02-15)
+
+
+### Bug Fixes
+
+* Make scripts executable ([#27](https://github.com/bhundven/golang-pre-commit/issues/27)) ([285f605](https://github.com/bhundven/golang-pre-commit/commit/285f6054afd02d429fa724016096a0573fae7d28))
+
 ## [1.1.1](https://github.com/bhundven/golang-pre-commit/compare/v1.1.0...v1.1.1) (2025-02-08)
 
 
