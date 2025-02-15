@@ -5,7 +5,7 @@ This is a collection of golang [pre-commit](http://pre-commit.com/) hooks.
 
 ```yaml
   - repo: https://github.com/bhundven/golang-pre-commit.git
-    rev: v1.1.1
+    rev: v1.1.2
     hooks:
       - id: go-fmt
 ```
