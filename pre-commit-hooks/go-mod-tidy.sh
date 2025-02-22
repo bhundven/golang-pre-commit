@@ -4,10 +4,17 @@
 
 set -euo pipefail
 
-if ! go mod tidy -v "$@"
-then
-  exit 2
-fi
+set -x
+
+while IFS= read -r gomod
+do
+  pushd "$(dirname "${gomod}")" >/dev/null 2>&1
+  if ! go mod tidy -v
+  then
+    exit 2
+  fi
+  popd >/dev/null 2>&1
+done < <(find . -type f -name 'go.mod' -print)
 
 if ! git diff --exit-code go.* &> /dev/null
 then
