@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.3](https://github.com/bhundven/golang-pre-commit/compare/v1.1.2...v1.1.3) (2025-02-22)
+
+
+### Bug Fixes
+
+* **go mod tidy:** Don't pass filenames ([#31](https://github.com/bhundven/golang-pre-commit/issues/31)) ([a53d41a](https://github.com/bhundven/golang-pre-commit/commit/a53d41ac852980c72c8044171a78957b041fb1f0))
+* **go-mod-tidy:** go mod tidy recursive ([#29](https://github.com/bhundven/golang-pre-commit/issues/29)) ([c80e381](https://github.com/bhundven/golang-pre-commit/commit/c80e3817788c86fabd0197450b9b18a147f5ae66))
+
 ## [1.1.2](https://github.com/bhundven/golang-pre-commit/compare/v1.1.1...v1.1.2) (2025-02-15)
 
 
