@@ -83,7 +83,7 @@
   types: [go]
   language: 'script'
   description: "Runs `go mod tidy -v`. Requires golang: https://go.dev/doc/install"
-  pass_filenames: true
+  pass_filenames: false
 - id: go-mod-vendor
   name: 'go mod vendor'
   entry: pre-commit-hooks/go-mod-vendor.sh
