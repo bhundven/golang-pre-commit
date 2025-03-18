@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.0] Unreleased
+
+### Bug Fixes
+* **go generate:** Hook was calling `pre-commit-hooks/go-build.sh` script. Changed to `pre-commit-hooks/go-generate.sh`.
+
 ## [1.1.3](https://github.com/bhundven/golang-pre-commit/compare/v1.1.2...v1.1.3) (2025-02-22)
 
 
