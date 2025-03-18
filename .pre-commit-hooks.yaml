@@ -72,7 +72,7 @@
   pass_filenames: false
 - id: go-generate
   name: 'go generate'
-  entry: pre-commit-hooks/go-build.sh
+  entry: pre-commit-hooks/go-generate.sh
   types: [go]
   language: 'script'
   description: "Runs `go generate`. Requires golang: https://go.dev/doc/install"
