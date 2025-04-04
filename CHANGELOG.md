@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/bhundven/golang-pre-commit/compare/v1.1.3...v1.1.4) (2025-03-18)
+
+
+### Bug Fixes
+
+* **go-generate:** fixed the hook to call the right script ([#33](https://github.com/bhundven/golang-pre-commit/issues/33)) ([361acc3](https://github.com/bhundven/golang-pre-commit/commit/361acc362542686c24d75e812ef6f20395fd1787))
+
 ## [1.2.0] Unreleased
 
 ### Bug Fixes
