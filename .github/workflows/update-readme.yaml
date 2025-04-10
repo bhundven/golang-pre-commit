@@ -61,7 +61,7 @@ jobs:
           echo -ne '  - repo: https://github.com/bhundven/golang-pre-commit.git\n' >&3
           echo -ne "    rev: ${LATEST_VER}\n" >&3
           echo -ne '    hooks:\n' >&3
-          echo -ne '      - id: go-fmt\n' >&3
+          echo -ne '      - id: go-generate\n' >&3
           echo -ne '```\n\n' >&3
 
           echo -ne "## Available Hooks\n\n" >&3
