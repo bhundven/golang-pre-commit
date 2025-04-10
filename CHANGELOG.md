@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/bhundven/golang-pre-commit/compare/v1.1.4...v1.2.0) (2025-04-10)
+
+
+### Features
+
+* Remove duplicate pre-commit hooks ([#36](https://github.com/bhundven/golang-pre-commit/issues/36)) ([d6d2fcf](https://github.com/bhundven/golang-pre-commit/commit/d6d2fcfbd32f509dcc89431ce72c13023abe53fc))
+
+
+### Bug Fixes
+
+* File descriptor should overwrite the destination ([#38](https://github.com/bhundven/golang-pre-commit/issues/38)) ([8622597](https://github.com/bhundven/golang-pre-commit/commit/862259772f150c0d052f779efaa092e0fdd19325))
+
 ## [1.1.4](https://github.com/bhundven/golang-pre-commit/compare/v1.1.3...v1.1.4) (2025-03-18)
 
 
