@@ -22,8 +22,3 @@ If you need a pre-commit for a linter or formatter, check out the official
 * `go-generate` - Runs `go generate`. Requires golang: https://go.dev/doc/install
 * `go-mod-tidy` - Runs `go mod tidy -v`. Requires golang: https://go.dev/doc/install
 * `go-mod-vendor` - Runs `go mod vendor`. Requires golang: https://go.dev/doc/install
-`go-build` - Runs `go build`. Requires golang: https://go.dev/doc/install
-* `go-generate` - Runs `go generate`. Requires golang: https://go.dev/doc/install
-* `go-mod-tidy` - Runs `go mod tidy -v`. Requires golang: https://go.dev/doc/install
-* `go-mod-vendor` - Runs `go mod vendor`. Requires golang: https://go.dev/doc/install
-all
