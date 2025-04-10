@@ -53,7 +53,7 @@ jobs:
           done
 
           # Open FD 3 for RM_DEST
-          exec 3<> "$RM_DEST"
+          exec 3> "$RM_DEST"
 
           cat "$RM_HEADER" >&3
           echo -ne "## Usage\n\n" >&3
