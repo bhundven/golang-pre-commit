@@ -1,3 +1,8 @@
 # golang-pre-commit
 
-This is a collection of golang [pre-commit](http://pre-commit.com/) hooks.
+This is a collection of golang [pre-commit](http://pre-commit.com/) hooks
+specifcally for build, generate, unit tests, and other build-time workflow
+checks.
+
+If you need a pre-commit for a linter or formatter, check out the official
+[golangci-lint](https://golangci-lint.run/) pre-commit: https://github.com/golangci/golangci-lint/blob/main/.pre-commit-hooks.yaml
